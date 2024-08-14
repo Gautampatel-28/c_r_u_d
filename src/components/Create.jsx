@@ -9,9 +9,11 @@ const Create = () => {
 
     const header =  {"Access-Control-Allow-Origin": "*"};
 
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      console.log("click")
         axios.post("https://66bca0a424da2de7ff6b469a.mockapi.io/c-r-u-d", {
-            name: name,     //19:00
+            name: name,     
             email: email,
             header,
         });
