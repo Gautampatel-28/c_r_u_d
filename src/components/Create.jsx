@@ -1,11 +1,13 @@
 import React from "react";
 import { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Create = () => {
     
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
+    const history = useNavigate();
 
     const header =  {"Access-Control-Allow-Origin": "*"};
 
@@ -16,7 +18,14 @@ const Create = () => {
             name: name,     
             email: email,
             header,
-        });
+        })
+
+        .then(() => {
+          history("/read")
+      })
+      .catch(error => {
+          console.error("There was an error submitting the data:", error);
+      })
     };
   return (
     <>
