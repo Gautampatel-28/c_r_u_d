@@ -30,6 +30,7 @@ const Create = () => {
   return (
     <>
     <h2>Create</h2>
+    <button className="btn btn-primary">Show Data</button>
       <form>
         <div className="mb-3">
           <label className="form-label">
