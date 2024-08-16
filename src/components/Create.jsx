@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Create = () => {
     
@@ -29,8 +30,12 @@ const Create = () => {
     };
   return (
     <>
+    <div className="d-flex justify-content-between m-2">
     <h2>Create</h2>
+    <Link to="/read"> 
     <button className="btn btn-primary">Show Data</button>
+    </Link>
+    </div>    
       <form>
         <div className="mb-3">
           <label className="form-label">

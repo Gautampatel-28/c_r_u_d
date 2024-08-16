@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Update = () => {
     const [id, setId] = useState("");
@@ -55,9 +56,14 @@ const Update = () => {
                         onChange={(e) => setEmail(e.target.value)}
                     />
                 </div>
-                <button type="submit" className="btn btn-primary">
+                <button type="submit" className="btn btn-primary mx-2" onClick={handleUpdate}>
                     Update
                 </button>
+                <Link to="/read">
+                <button type="submit" className="btn btn-secondary mx-2">
+                    Back
+                </button>
+                </Link>
             </form>
         </>
     );
